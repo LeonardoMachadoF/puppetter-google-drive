@@ -13,7 +13,7 @@ const main = async () => {
         });
 
         let images = await page.$$('.pmHCK')
-
+        console.log()
         for (let i in images) {
             let allImages = await images[i].$$('img')
             let res = await allImages[allImages.length - 2].evaluate(i => {
